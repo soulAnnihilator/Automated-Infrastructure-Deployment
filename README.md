@@ -74,14 +74,8 @@ Clone this repository to your local machine:
 git clone https://github.com/soulAnnihilator/Automated-Infrastructure-Deployment.git
 
 
-### Step 2: Configure Variables
-Edit the `variables.tf` file in the root directory to customize infrastructure settings:
-
-variable "aws_region" { default = "us-east-1" }
-
-variable "instance_type" { default = "t2.micro" }
-
-variable "bucket_name" { description = "Name for the S3 bucket" }
+### Step 2: Configure .tfvars file
+Add the `terraform.tfvars` file in the root directory to customize infrastructure settings:
 
 
 ### Step 3: Initialize Terraform
@@ -137,22 +131,4 @@ To delete the resources and avoid unnecessary costs, use:
 Type `yes` when prompted to confirm.
 
 ---
-
-## ✅ Best Practices
-
-- Use **Terraform Workspaces** for managing multiple environments (e.g., dev, staging, prod).
-- Store sensitive variables like database passwords in a secure Terraform variables file or use **AWS Secrets Manager**.
-- Enable **state file locking** if collaborating with a team by using Terraform remote backends (e.g., S3 with DynamoDB).
-
----
-
-## 🤝 Contributing
-
-Feel free to submit issues or pull requests to improve this project. Contributions are always welcome!
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
